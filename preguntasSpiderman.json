@@ -1,0 +1,62 @@
+[
+    {
+        "pregunta": "¿Cuál es el nombre real de Spider-Man?",
+        "respuestas": ["Peter Parker", "Tony Stark", "Bruce Wayne"],
+        "correcta": 0
+
+    },
+    {
+        "pregunta": "¿En qué ciudad ficticia se desarrollan las historias de Spider-Man?",
+        "respuestas": ["Gotham City", "Metropolis", "Nueva York"],
+        "correcta": 2
+
+    },
+    {
+        "pregunta": "¿Cuál es el superpoder característico de Spider-Man?",
+        "respuestas": ["Vuelo", "Fuerza sobrehumana", "Agilidad y capacidad para trepar paredes"],
+        "correcta": 2
+
+    },
+    {
+        "pregunta": "¿Cuál es el nombre del tío de Peter Parker que influyó en su vida superheroica?",
+        "respuestas": ["Ben Parker", "Tony Stark", "Bruce Banner"],
+        "correcta": 0
+
+    },
+    {
+        "pregunta": "¿Qué villano es conocido por ser el principal enemigo de Spider-Man?",
+        "respuestas": ["Loki", "Venom", "Green Goblin"],
+        "correcta": 2
+
+    },
+    {
+        "pregunta": "¿Cuál es el medio de transporte principal de Spider-Man?",
+        "respuestas": ["Batimóvil", "Spider-Mobile", "Spider-Cycle"],
+        "correcta": 2
+
+    },
+    {
+        "pregunta": "¿En qué profesión trabaja Peter Parker?",
+        "respuestas": ["Fotógrafo", "Científico nuclear", "Periodista"],
+        "correcta": 0
+
+    },
+    {
+        "pregunta": "¿Cuál es el nombre de la novia de Spider-Man?",
+        "respuestas": ["Mary Jane Watson", "Gwen Stacy", "Felicia Hardy"],
+        "correcta": 0
+
+    },
+    {
+        "pregunta": "¿Qué sustancia es conocida por ser la debilidad de Spider-Man?",
+        "respuestas": ["Kryptonita", "Symbiote", "Red de impacto"],
+        "correcta": 2
+
+    },
+    {
+        "pregunta": "¿Quién fue el creador original del personaje Spider-Man en los cómics de Marvel?",
+        "respuestas": ["Stan Lee y Steve Ditko", "Jack Kirby", "Frank Miller"],
+        "correcta": 0
+
+    }
+]

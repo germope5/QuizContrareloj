@@ -1,0 +1,15 @@
+{
+    "name": "quiz-app",
+    "version": "1.0.0",
+    "description": "Quiz App contrareloj con ranking",
+    "main": "index.html",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "author": "Germán Mora",
+    "license": "MIT",
+    "devDependencies": {
+      "live-server": "^1.2.1"
+    }
+  }
+  

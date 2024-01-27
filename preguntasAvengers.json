@@ -1,0 +1,52 @@
+[
+    {
+        "pregunta": "¿Cuál es la primera película de los Vengadores en el MCU?",
+        "respuestas": ["The Avengers", "Avengers: Age of Ultron", "Avengers: Infinity War"],
+        "correcta": 0
+    },
+    {
+        "pregunta": "¿Quién dirigió la película 'Avengers: Endgame'?",
+        "respuestas": ["Joss Whedon", "Russo Brothers", "James Gunn"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Cuál es la gema del infinito que aparece en 'The Avengers'?",
+        "respuestas": ["Gema del Espacio", "Gema de la Mente", "Gema del Teseracto"],
+        "correcta": 2
+    },
+    {
+        "pregunta": "¿Quién es el principal antagonista en 'Avengers: Infinity War'?",
+        "respuestas": ["Loki", "Thanos", "Ultron"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Cuál es el lema principal de los Vengadores?",
+        "respuestas": ["Unidos venceremos", "Vengadores por siempre", "Avengers, Assemble!"],
+        "correcta": 2
+    },
+    {
+        "pregunta": "¿Cuál es la última película de los Vengadores lanzada hasta 2022?",
+        "respuestas": ["Avengers: Endgame", "Avengers: Infinity War", "Avengers: Age of Ultron"],
+        "correcta": 0
+    },
+    {
+        "pregunta": "¿Qué actor interpreta a Iron Man en el MCU?",
+        "respuestas": ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr."],
+        "correcta": 2
+    },
+    {
+        "pregunta": "¿Cuál es la organización a la que pertenecen los Vengadores?",
+        "respuestas": ["SHIELD", "HYDRA", "AIM"],
+        "correcta": 0
+    },
+    {
+        "pregunta": "¿Cuántas películas de los Vengadores hay en el MCU hasta 2022?",
+        "respuestas": ["3", "4", "5"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿En qué película de los Vengadores aparece por primera vez Spider-Man en el MCU?",
+        "respuestas": ["Avengers: Infinity War", "Avengers: Endgame", "Captain America: Civil War"],
+        "correcta": 2
+    }
+]

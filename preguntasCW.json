@@ -1,0 +1,52 @@
+[
+    {
+        "pregunta": "¿Cuál fue el desencadenante del conflicto en 'Civil War'?",
+        "respuestas": ["La muerte de Tony Stark", "La revelación de la identidad secreta de Spider-Man", "El ataque de Thanos"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Quiénes lideraron los bandos opuestos en 'Civil War'?",
+        "respuestas": ["Capitán América y Iron Man", "Thor y Hulk", "Black Widow y Hawkeye"],
+        "correcta": 0
+    },
+    {
+        "pregunta": "¿Cuál es el Acta de Registro Superhumano?",
+        "respuestas": ["Una ley para restringir la venta de armas", "Un tratado para controlar a los superhéroes", "Un acuerdo para la exploración espacial"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Cuál es el nombre del clon de Thor creado durante 'Civil War'?",
+        "respuestas": ["Ragnarok", "Thunderstrike", "Beta Ray Bill"],
+        "correcta": 0
+    },
+    {
+        "pregunta": "¿Quién fue el principal impulsor del Acta de Registro Superhumano?",
+        "respuestas": ["Nick Fury", "Reed Richards", "Black Panther"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Qué poderoso ser cósmico intervino en 'Civil War'?",
+        "respuestas": ["Thanos", "Galactus", "El Vigilante"],
+        "correcta": 2
+    },
+    {
+        "pregunta": "¿Qué superhéroe cambió de bando durante el conflicto?",
+        "respuestas": ["Hawkeye", "Black Widow", "Spider-Man"],
+        "correcta": 2
+    },
+    {
+        "pregunta": "¿Cuál fue el desenlace final del conflicto?",
+        "respuestas": ["El triunfo del bando de Iron Man", "El triunfo del bando de Capitán América", "La reconciliación pacífica"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Quién escribió 'Civil War'?",
+        "respuestas": ["Stan Lee", "Mark Millar", "Brian Michael Bendis"],
+        "correcta": 1
+    },
+    {
+        "pregunta": "¿Cuál fue la consecuencia más impactante de 'Civil War' en el universo Marvel?",
+        "respuestas": ["La muerte de Spider-Man", "La creación de los Nuevos Vengadores", "La desaparición de los X-Men"],
+        "correcta": 0
+    }
+]
