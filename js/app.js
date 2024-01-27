@@ -163,7 +163,7 @@ function siguientePregunta() {
         if (preguntaActualIndex < preguntasActuales.length) {
             mostrarPreguntaActual(preguntasActuales[preguntaActualIndex]);
         } else {
-            mostrarPuntuacionFinal();
+            mostrarPuntuacionFinal(); // Llamar a mostrarPuntuacionFinal después de la última pregunta
         }
     }, 2000);
 }
@@ -218,7 +218,6 @@ function mostrarFeedback(esCorrecta) {
 
 function mostrarPuntuacionFinal() {
     // Calcular la puntuación final del jugador
-    
     const puntuacionFinal = puntos;
 
     // Crear el contenedor de la puntuación final
@@ -230,16 +229,86 @@ function mostrarPuntuacionFinal() {
     puntuacionFinalElement.textContent = `¡Puntuación Final: ${puntuacionFinal} puntos!`;
     contenedorPuntuacionFinal.appendChild(puntuacionFinalElement);
 
-    // Botón para regresar a la selección de temática
-    const regresarBtn = document.createElement('button');
-    regresarBtn.textContent = 'Regresar a la Selección de Temática';
-    regresarBtn.addEventListener('click', regresarSeleccionTematica);
-    contenedorPuntuacionFinal.appendChild(regresarBtn);
+    // Input para el nombre del jugador
+    const nombreInput = document.createElement('input');
+    nombreInput.type = 'text';
+    nombreInput.placeholder = 'Ingresa tu nombre';
+    contenedorPuntuacionFinal.appendChild(nombreInput);
+
+    // Botón para guardar la puntuación
+    const guardarBtn = document.createElement('button');
+    guardarBtn.textContent = 'Guardar Puntuación';
+    guardarBtn.addEventListener('click', () => {
+        const nombreJugador = nombreInput.value;
+        if (nombreJugador.trim() !== '') {
+            // Guardar la puntuación con el nombre
+            guardarPuntuacion(nombreJugador, puntuacionFinal);
+
+            // Mostrar la pantalla de ranking
+            mostrarRanking();
+        } else {
+            alert('Ingresa tu nombre para guardar la puntuación.');
+        }
+    });
+    contenedorPuntuacionFinal.appendChild(guardarBtn);
 
     // Limpiar contenido anterior y agregar la puntuación final
     const appContainer = document.getElementById('app');
     appContainer.innerHTML = '';
     appContainer.appendChild(contenedorPuntuacionFinal);
+}
+
+function guardarPuntuacion(nombre, puntuacion) {
+    // Aquí debes implementar la lógica para guardar la puntuación de forma persistente
+    // Puedes utilizar almacenamiento local (localStorage) o una base de datos, dependiendo de tus necesidades
+    // Ejemplo utilizando localStorage:
+    const puntuacionesGuardadas = JSON.parse(localStorage.getItem('puntuaciones')) || [];
+    puntuacionesGuardadas.push({ nombre, puntuacion });
+    localStorage.setItem('puntuaciones', JSON.stringify(puntuacionesGuardadas));
+}
+
+function mostrarRanking() {
+    // Implementa la lógica para mostrar la pantalla de ranking
+    // Puedes obtener las puntuaciones guardadas y ordenarlas antes de mostrarlas
+    const puntuacionesGuardadas = JSON.parse(localStorage.getItem('puntuaciones')) || [];
+
+    // Ordenar las puntuaciones de mayor a menor
+    const puntuacionesOrdenadas = puntuacionesGuardadas.sort((a, b) => b.puntuacion - a.puntuacion);
+
+    // Crear el contenedor de la pantalla de ranking
+    const contenedorRanking = document.createElement('div');
+    contenedorRanking.id = 'ranking';
+
+    // Crear elemento para mostrar el ranking
+    const rankingElement = document.createElement('div');
+    rankingElement.className = 'ranking';
+
+    // Encabezado del ranking
+    const encabezadoRanking = document.createElement('h2');
+    encabezadoRanking.textContent = 'Ranking de Puntuaciones';
+    rankingElement.appendChild(encabezadoRanking);
+
+    // Lista de puntuaciones
+    const listaPuntuaciones = document.createElement('ul');
+    puntuacionesOrdenadas.forEach((puntuacion, index) => {
+        const itemPuntuacion = document.createElement('li');
+        itemPuntuacion.textContent = `${index + 1}. ${puntuacion.nombre}: ${puntuacion.puntuacion} puntos`;
+        listaPuntuaciones.appendChild(itemPuntuacion);
+    });
+    rankingElement.appendChild(listaPuntuaciones);
+
+    // Botón para regresar a la selección de temática
+    const regresarBtn = document.createElement('button');
+    regresarBtn.textContent = 'Regresar a la Selección de Temática';
+    regresarBtn.addEventListener('click', regresarSeleccionTematica);
+    rankingElement.appendChild(regresarBtn);
+
+    contenedorRanking.appendChild(rankingElement);
+
+    // Limpiar contenido anterior y agregar la pantalla de ranking
+    const appContainer = document.getElementById('app');
+    appContainer.innerHTML = '';
+    appContainer.appendChild(contenedorRanking);
 }
 
 function regresarSeleccionTematica() {
