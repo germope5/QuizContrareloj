@@ -133,7 +133,7 @@ function siguientePregunta() {
     clearInterval(temporizador);
 
     // Obtener la respuesta seleccionada
-    const opcionesRespuesta = document.getElementsByName('respuestas'); // Cambiado a 'respuestas'
+    const opcionesRespuesta = document.getElementsByName('respuestas');
     let respuestaSeleccionada;
 
     opcionesRespuesta.forEach(opcion => {
@@ -142,31 +142,32 @@ function siguientePregunta() {
         }
     });
 
-    // Convertir la respuesta correcta a cadena
-    const respuestaCorrecta = preguntasActuales[preguntaActualIndex].correcta.toString(); // Convertido a cadena
+    // Obtener la respuesta correcta y el tiempo restante
+    const preguntaActual = preguntasActuales[preguntaActualIndex];
+    const respuestaCorrecta = preguntaActual.correcta;
+    const segundosRestantes = tiempoRestante;
 
-    // Asignar puntos según la respuesta y mostrar feedback
-    const esCorrecta = respuestaSeleccionada === respuestaCorrecta;
-    
-    if(esCorrecta) {
-        puntos += 10;
-    }
+    // Calcular los puntos asignados según la nueva lógica
+    const esCorrecta = respuestaSeleccionada === respuestaCorrecta.toString();
+    const puntosAsignados = esCorrecta ? Math.max(segundosRestantes, 0) : 0;
 
+    // Actualizar la puntuación total
+    puntos += puntosAsignados;
+
+    // Mostrar feedback y continuar con la lógica original
     mostrarFeedback(esCorrecta);
 
-    // Retrasar la navegación a la siguiente pregunta
     setTimeout(() => {
-        // Incrementar el índice de la pregunta actual
         preguntaActualIndex++;
 
-        // Mostrar la siguiente pregunta o la puntuación final si no hay más preguntas
         if (preguntaActualIndex < preguntasActuales.length) {
             mostrarPreguntaActual(preguntasActuales[preguntaActualIndex]);
         } else {
             mostrarPuntuacionFinal();
         }
-    }, 2000); // Retraso de 2 segundos antes de mostrar la siguiente pregunta
+    }, 2000);
 }
+
 
 function mostrarFeedback(esCorrecta) {
     const contenedorFeedback = document.createElement('div');
@@ -184,29 +185,33 @@ function mostrarFeedback(esCorrecta) {
 
     contenedorFeedback.appendChild(mensajeFeedback);
 
-    // Obtener la respuesta correcta como número
-    const respuestaCorrectaNumero = Number(preguntasActuales[preguntaActualIndex].correcta);
+    // Obtener la respuesta correcta
+    const respuestaCorrecta = preguntasActuales[preguntaActualIndex].correcta;
 
-    // Obtener la respuesta seleccionada como número
-    const opcionesRespuesta = document.getElementsByName('respuesta');
-    let respuestaSeleccionadaNumero;
+    // Obtener la respuesta seleccionada
+    const opcionesRespuesta = document.getElementsByName('respuestas');
+    let respuestaSeleccionada;
 
     opcionesRespuesta.forEach(opcion => {
         if (opcion.checked) {
-            respuestaSeleccionadaNumero = Number(opcion.value);
+            respuestaSeleccionada = opcion.value;
         }
     });
 
+    // Convertir la respuesta seleccionada a cadena
+    const respuestaSeleccionadaCadena = respuestaSeleccionada.toString();
+
     // Mostrar la respuesta correcta
-    const respuestaCorrecta = document.createElement('p');
-    respuestaCorrecta.textContent = `La respuesta correcta era: ${String.fromCharCode(65 + respuestaCorrectaNumero)}`;
-    contenedorFeedback.appendChild(respuestaCorrecta);
+    const respuestaCorrectaElement = document.createElement('p');
+    respuestaCorrectaElement.textContent = `La respuesta correcta era: ${String.fromCharCode(65 + parseInt(respuestaCorrecta))}`;
+    contenedorFeedback.appendChild(respuestaCorrectaElement);
 
     // Limpiar contenido anterior y agregar el feedback
     const appContainer = document.getElementById('app');
     appContainer.innerHTML = '';
     appContainer.appendChild(contenedorFeedback);
 }
+
 
 
 
