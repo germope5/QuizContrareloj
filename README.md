@@ -1,4 +1,4 @@
-# Cuestionario Contrareloj
+# Cuestionario Contrareloj ⏲️
 
 Una aplicación web simple de preguntas y respuestas sobre temáticas específicas.
 
