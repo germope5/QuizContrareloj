@@ -8,9 +8,9 @@ La aplicación permite a los usuarios seleccionar una temática (por ejemplo, Sp
 
 ## Evidencia (Capturas de Pantalla)
 
-[!Página_Principal](assets/images/shot1.png)
+![Página Principal](assets/images/shot1.png)
 
-[!Pregunta1Quiz](assets/images/shot2.png)
+![Pregunta 1 Quiz](assets/images/shot2.png)
 
 ## Características
 
