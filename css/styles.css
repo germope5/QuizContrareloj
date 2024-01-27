@@ -26,6 +26,11 @@ body {
     margin-bottom: 20px;
 }
 
+.pregunta p,
+.respuestas-container label {
+    text-align: justify;
+}
+
 .respuestas-container {
     margin-top: 10px;
 }
