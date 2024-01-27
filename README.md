@@ -19,9 +19,6 @@ La aplicación permite a los usuarios seleccionar una temática (por ejemplo, Sp
 - Feedback después de cada pregunta
 - Puntuación final y posibilidad de volver a jugar
 
-## Capturas de Pantalla
-
-(Inserta capturas de pantalla aquí si las tienes)
 
 ## Instalación
 
