@@ -6,6 +6,12 @@ Una aplicación web simple de preguntas y respuestas sobre temáticas específic
 
 La aplicación permite a los usuarios seleccionar una temática (por ejemplo, Spider-Man, Civil War, Avengers) y responder una serie de preguntas relacionadas con esa temática. Cada pregunta tiene opciones de respuesta y un temporizador. Después de responder, se proporciona un feedback y se muestra la puntuación final.
 
+## Evidencia (Capturas de Pantalla)
+
+[!Página_Principal](assets/images/shot1.png)
+
+[!Pregunta1Quiz](assets/images/shot2.png)
+
 ## Características
 
 - Selección de temática
