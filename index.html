@@ -7,17 +7,30 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header>
+        <div class="header-left">
+            <a href="https://github.com/germope5/QuizContrareloj" target="_blank">
+                <img  src="/assets/images/github.png" alt="Repositorio en Github">
+            </a>
+            
+        </div>
+        <div class="header-right">
+            <a href="index.html">
+                <img  src="/assets/images/spiderman.png" alt="Inicio">
+            </a>
+        </div>
+    </header>
     <div id="app">
         <div id="inicio">
             <h1>Marvel Quiz</h1>
             <p>Selecciona una temática:</p>
-            <select id="tematicas">
+            <select class="tematicas" id="tematicas">
                 <option value="spiderman">Spider-Man</option>
                 <option value="civilwar">Civil War</option>
                 <option value="avengers">Películas de Avengers</option>
             </select>
-            <button onclick="iniciarJuego()">Comenzar a Jugar</button>
-            <button onclick="mostrarRanking()">Consultar Ranking</button>
+            <button onclick="iniciarJuego()">Jugar</button>
+            <button onclick="mostrarRanking()">Ranking</button>
             <p>Bienvenido al Cuestionario de Marvel, donde puedes poner a prueba tus conocimientos en diferentes temáticas relacionadas con Marvel.</p>
             <p>Selecciona una temática y responde las preguntas antes de que se agote el tiempo. Cuentas con 30 segundos por cada pregunta.</p>
             <p>Cada pregunta correcta suma 10 puntos, mientras que las respuestas incorrectas no suman puntos.</p>
@@ -28,6 +41,20 @@
 
     </div>
 
+    <footer>
+        <div class="footer-column">
+            &copy; 2024
+        </div>
+        <div class="footer-column">
+            Todos los Derechos Reservados
+        </div>
+        <div class="footer-column">
+            Creado por Germán Mora
+        </div>
+    </footer>
+
     <script src="js/app.js"></script>
+
+    
 </body>
 </html>

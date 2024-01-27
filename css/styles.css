@@ -10,6 +10,40 @@ body {
     background: linear-gradient(to bottom right, #f0131e, #ffffff, #f0131e);
     /* Colores utilizados en el degradado: rojo (#f0131e) - blanco (#ffffff) - rojo (#f0131e) */
     text-align: center;
+    flex-direction: column;
+    min-height: 100vh; /* Establece el alto mínimo del cuerpo para cubrir el 100% del viewport */
+}
+
+footer {
+    /* Color de fondo del footer */
+    color: #181818; /* Color del texto del footer */
+    padding: 10px; /* Espaciado interno del footer */
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+     /* Cambia el color de fondo según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+}
+
+.header-left img,
+.header-right img {
+    width: 70px; /* Ajusta el ancho de las imágenes según tus preferencias */
+    height: 70px; /* Ajusta la altura de las imágenes según tus preferencias */
+    cursor: pointer;
+}
+
+.header-left img {
+    margin-right:600px; /* Empuja la imagen a la esquina izquierda */
+}
+
+.header-right img {
+    margin-left: 600px; /* Empuja la imagen a la esquina derecha */
 }
 
 .container {
@@ -173,4 +207,8 @@ select option:focus {
 select option:checked {
     background-color: #f0131e;
     color: #fff;
+}
+
+.tematicas {
+    margin-bottom: 20px;
 }
