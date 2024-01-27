@@ -7,7 +7,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom right, #f0131e, #ffffff, #f0131e);
+    /* Colores utilizados en el degradado: rojo (#f0131e) - blanco (#ffffff) - rojo (#f0131e) */
+    text-align: center;
 }
 
 .container {
@@ -90,7 +92,18 @@ button:hover {
 
 h1 {
     text-align: center;
+    background-color: #f0131e;
+    color: white;
+    display: inline-block;
+    padding: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 auto; /* Añade esta línea para centrar horizontalmente */
+    max-width: 80%; /* Ajusta el ancho máximo según tus preferencias */
 }
+
+
 
 
 
@@ -102,3 +115,57 @@ h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:hover,
+select:focus {
+    border-color: #f0131e; /* Cambia el color del borde al pasar el ratón o cuando está enfocado */
+}
+
+/* Personaliza la apariencia del botón desplegable */
+select::-ms-expand {
+    display: none;
+}
+
+/* Personaliza las flechas del botón desplegable en navegadores WebKit */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('./../assets/images/arrow-down.png'); /* Puedes utilizar tu propia imagen de flecha */
+    background-size: 30px;
+    background-position: right 4px center;
+    background-repeat: no-repeat;
+    width: 230px;
+}
+
+select option:hover {
+    background-color: #f0131e;
+    color: #fff;
+}
+select option {
+    background-color: #f0131e;
+    color: #fff;
+}
+
+/* Cambia el color de fondo al resaltar las opciones con las teclas de flecha arriba/abajo */
+select option:focus {
+    background-color: #f0131e;
+    color: #fff;
+}
+
+/* Estilos adicionales para navegadores específicos */
+select option:checked {
+    background-color: #f0131e;
+    color: #fff;
+}
